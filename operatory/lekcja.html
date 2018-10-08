@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Moja Strona WWW </title>
+<!-- komentarz -->
+
+<script type="text/javascript">
+//
+
+/* Operatory w JS
+
+1. Arytmetyczne
+	*
+	/
+	+
+	-
+	% - reszta z dzielenia
+	++ - inkrementacja: x++, ++x (wsteczna i przednia)
+	-- - dekrementacja: x--, --x
+*/ 
+var x = 12;
+document.write(++x + "</br>");
+
+// >>> 13  (najpierw inkrementacja, potem wyświetlenie)
+
+document.write(x++ + "</br>");
+
+// >>> 13 (wyświetlenie, potem inkrementacja)
+
+document.write(x + "</br>")
+
+// >>> 14
+
+/*
+
+2. Porównania (relacyjne)
+Porównywanie argumentów, wynikiem jest wartość logiczna (true / false).
+	== - równości (np. x==y)
+	!= - różnicy (np. )
+	=== - równe i czy są takiego samego typu (np. x===y)
+	!== - różne, bądź różnych typów (np. x!==y)
+	>
+	< 
+	<=
+	>=
+
+3. Operatory bitowe
+	& - iloczyn bitowy AND (np. a&b)
+	| - suma bitowa OR (np. a | b)
+	^ - różnica symetryczna XOR
+	~ - negacja bitów NOT (np. ~a)
+	>> - przesunięcie bitowe w prawo (np. a << n, n - o ile bitów przesunięcie)
+	<< - przesunięcie bitowe w lewo
+
+	Operatory zmieniają liczbę na binarną i wykonują działanie w systemie binarnym.
+*/
+
+var liczba = 179 & 38;
+	// 1011 0011: 179
+	// 0010 0110: 38
+	// --------------
+	// = 34
+document.write(liczba);
+// >>> 34
+
+var liczba2 = 84 << 1;
+	// 1010 100: 84
+	// 1010 0100  (dodajemy zero w lewo)
+	// 1010 0100 = 164
+
+document.write("</br>" + liczba2)
+// >>> 
+
+/*
+
+4. Logiczne
+	&& - iloczyn logiczny AND
+	|| - suma logiczna OR
+	! - negacja logiczna NOT
+	
+5. Przypisania
+	x   =   y     : x = y
+	x  +=   y     : x = x+y
+	x  -=   y     : x = x-y
+	x  *=   y     : x = x*y
+	x  /=   y     : x = x/y
+	x  %=   y     : x = x%y
+	x <<=   y     : x = x << y
+	x >>=   y     : x = x >> y
+	x  &=   y     : x = x & y
+	x  |=   y     : x = x | y
+	x  ^=   y     : x = x ^ y
+
+*/
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

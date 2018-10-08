@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Moja Strona WWW</title>
+<!-- komentarz -->
+
+</head>
+<body>
+
+    <p>
+    <script type="text/javascript">
+      var data = new Date();
+
+      var options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }
+
+      var options2 = {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric'
+      }
+
+      document.write(`Dzisiejsza data:
+      ${data.toLocaleDateString('pl', options)} (${data.toLocaleDateString('pl', options2)})
+      `)
+    </script>
+    </p>
+
+</body>
+</html>

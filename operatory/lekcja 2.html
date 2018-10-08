@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Moja Strona WWW </title>
+<!-- komentarz -->
+
+<script type="text/javascript">
+
+/*
+
+Temat: Okienka
+
+\t - tabulacja
+\n - nowa linijka
+\\ - znak ukośnika
+\" - cudzysłów
+
+*/
+
+//alert("Jakiś \t \\ \"komunikat\" \n druga linijka");
+
+/*
+
+prompt - wczytywanie danych
+("Komunikat", domyślne wartości: opcjonalny)
+
+Wszystkie prowadzane dane to string.
+
+*/ 
+//var dane = prompt("Podaj dane", "tu pisz...");
+//document.write(dane);
+
+/*
+
+confirm("Treść komunikatu")
+
+Zwraca dane jako boolean
+*/
+
+var wygrana = confirm("Czy na pewno chcesz wygrać iPhone?")
+if (wygrana){
+    document.write("<b>HACKED BY BONZO!!!</b>");
+}
+else{
+    document.write("WEŹ IDŹ.")
+}
+
+/*
+confirm, prompt, alert to metody obiektu window.
+window.confirm()
+
+*/
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

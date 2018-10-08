@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Moja Strona WWW</title>
+<!-- komentarz -->
+
+</head>
+<body>
+
+    <p>
+        Twój miesiąc to: <b>
+        <script type="text/javascript">
+        var miesiac = parseInt(prompt("Podaj numer miesiąca"));
+        var dzien = parseInt(prompt("Podaj numer dnia:"));
+
+        switch(miesiac) {
+            case 1:
+            document.write("Styczeń");
+            break;
+            case 2:
+            document.write("Luty");
+            break;
+            case 3:
+            document.write("Marzec");
+            break;
+            case 4:
+            document.write("Kwiecien");
+            break;
+            case 5:
+            document.write("Maj");
+            break;
+            case 6:
+            document.write("Czerwiec");
+            break;
+            case 7:
+            document.write("Lipiec");
+            break;
+            case 8:
+            document.write("Sierpien");
+            break;
+            case 9:
+            document.write("Wrzesien");
+            break;
+            case 10:
+            document.write("Październik");
+            break;
+            case 11:
+            document.write("Listopad");
+            break;
+            case 12:
+            document.write("Grudzien");
+            break;
+            default:
+            alert("Numer miesiąca poza zakresem!");
+            document.write("???");
+        }
+        </script>
+        </b>
+
+        , a dzien: <b>
+        <script type="text/javascript">
+
+        switch(dzien) {
+            case 1:
+            document.write("Poniedziałek");
+            break;
+            case 2:
+            document.write("Wtorek");
+            break;
+            case 3:
+            document.write("Środa");
+            break;
+            case 4:
+            document.write("Czwartek");
+            break;
+            case 5:
+            document.write("Piątek");
+            break;
+            case 6:
+            document.write("Sobota");
+            break;
+            case 7:
+            document.write("Niedziela");
+            break;
+            default:
+            alert("Numer dnia poza zakresem");
+            document.write("???");
+        }
+        </script>
+        </b>
+    </p>
+
+    <script type="text/javascript">
+    // Obiekt Date()
+
+    var data = new Date();
+
+    var dzien_mc = data.getDate(); // zwraca dzien mc (1-31)
+
+    document.write("<br>" + dzien_mc);
+
+    var mc = data.getMonth() + 1; // zwraca numer mc (0-11) 0 - styczen
+
+    document.write("<br>" + mc);
+
+    var rok = data.getFullYear();
+
+    document.write("<br>" + rok);
+
+    var dzien_tygodnia = data.getDate(); // 0 - niedziela
+
+    </script>
+
+</body>
+</html>

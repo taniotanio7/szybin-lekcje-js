@@ -1,0 +1,43 @@
+<!--Pytanie o 3 rzeczy:
+- imię
+- nazwisko
+- wiek
+- informacje mają być w tabelce-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Proste zadanko w tabelce</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var imie = prompt("Podaj imię:");
+    var nazwisko = prompt("Podaj nazwisko:");
+    var wiek = prompt("Wiek:");
+
+    // Zabezpieczenie przed XSS
+
+    imie = encodeURIComponent(imie);
+    nazwisko = encodeURIComponent(nazwisko);
+    wiek = encodeURIComponent(wiek);
+
+    document.write(`
+    <table border>
+        <tr>
+            <th scope="row">Imię</th>
+            <td>${imie}</td>
+        </tr>
+        <tr>
+            <th scope="row">Nazwisko</th>
+            <td>${nazwisko}</td>
+        </tr>
+        <tr>
+            <th scope="row">Wiek</th>
+            <td>${wiek}</td>
+        </tr>
+    </table>
+    `)
+    </script>
+</body>
+</html>
