@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lekcja</title>
+
+<script type="text/javascript">
+    // Funkcje w JS
+
+    /*
+    function nazwa_funkcji () {
+        ... kod funkcji
+    }
+
+    lub
+
+    (funkcja anonimowa)
+    var nazwa_funkcji = function() {
+        ... kod funkcji
+    }
+
+    nazwa funkcji musi:
+    - składać się z liter, cyfr lub znaku podkreślenia
+    - nie stosować polskich znaków
+    - wielkość liter ma znaczenie
+    - nie może znaczynać się cyfrą
+    - konwencja: camelCase (np.: nazwaFunkcji)
+    */
+
+    function wyswietlNapis() {
+        document.write("Jakiś napis wywołany przez funkcję <br />");
+    }
+
+    function wyswietlImie(imie) {
+        document.write("Twoja twarz brzmi znajomo... " + imie + "<br />");
+    }
+
+    function dodaj(wart1, wart2) {
+        document.write(`Suma: ${wart1} + ${wart2} = ${wart1+wart2}<br>`)
+    }
+
+    // Wywołanie funkcji
+
+    wyswietlNapis();
+    wyswietlImie('Janusz');
+    dodaj(2,2);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zwracanie wartości przez funkcje</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    /*
+
+    function nazwa_funkcji(argumenty) {
+        instrukcje;
+        return wartość;
+    }
+
+    To co return jest zwracane przez funkcję i kończy wykonywanie dalszego kodu
+
+     */
+
+    function dodaj(liczba1, liczba2) {
+        let wynik = liczba1 + liczba2;
+        return wynik;
+    }
+
+    let wartosc = dodaj(21,41);
+    document.write(wartosc + "<br>");
+    document.write(dodaj(2,2) + "<br>");
+
+    function kwadrat(x) {
+        return x*x;
+        alert("DZIĘKI JAVASCRIPT!"); // to nie zadziała...
+    }
+
+    document.write(kwadrat(3));
+    
+</script>
+
+</body>
+</html>

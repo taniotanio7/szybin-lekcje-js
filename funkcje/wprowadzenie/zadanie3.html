@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3</title>
+    <link rel="stylesheet"
+          href="bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Tabliczka mnożenia</h1>
+
+    <table class="table table-sm table-striped">
+    <script>
+    function tabliczkaMnozenia(ilosc) {
+        for(let i = 0; i <= ilosc; i++) {
+            // Linijki
+            document.write("<tr>");
+            if(i === 0) {
+                // Górne wartości w tabelce
+                document.write("<thead class='thead-dark'>")
+                for(var j = 0; j <= ilosc; j++) {
+                    if(j === 0) {
+                        document.write("<th scope='col'>X</th>");
+                    }
+                    else {
+                        document.write(`<th scope="col">${j}</th>`);
+                    }
+                }
+                document.write("</thead>")
+            }
+            else {
+                for (let j = 0; j <= ilosc; j++) {
+                    // Kolumny
+                    if (j === 0) {
+                        document.write(`<th scope="row">${i}</th>`)
+                    }
+                    else {
+                        document.write(`<td>${i*j}</td>`)
+                    }
+                }
+            }
+            document.write("</tr>");
+        }
+    }
+
+    const wielkoscTabelki = parseInt(prompt('Podaj wielkość tabelki'));
+
+    tabliczkaMnozenia(wielkoscTabelki);
+    </script>
+    </table>
+</div>
+</body>
+</html>

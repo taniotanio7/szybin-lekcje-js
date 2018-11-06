@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 1</title>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="animacje.css" rel="stylesheet" type="text/css">
+    <style>
+        html,
+        body {
+            height: 100%
+        }
+
+        .wynik {
+        }
+    </style>
+</head>
+<body>
+
+<div class="container h-100 row align-items-center">
+    <div class="col">
+        <h1>Wynik twojego działania to:</h1> <br>
+        <p class="wynik display-1"></p>
+    </div>
+</div>
+
+<script>
+    function dzialanieMatematyczne(liczba1, liczba2, operacja) {
+        if (isNaN(liczba1) || isNaN(liczba2)) {
+            return "Któraś z podanych wartości nie jest liczbą";
+        }
+
+        if (operacja === '+') {
+            return liczba1 + liczba2
+        } else if (operacja === '-') {
+            return liczba1 * liczba2;
+        } else if (operacja === '*') {
+            return liczba1 * liczba2;
+        } else if (operacja === '/') {
+            if (liczba2 === 0) {
+                alert("Nie można dzielić przez 0!");
+            } else {
+                return liczba1 / liczba2;
+            }
+        } else {
+            alert("Błąd! Nie podano rodzaju operacji lub jest on niepoprawny.");
+        }
+    }
+
+    const liczba1 = parseInt(prompt("Podaj liczbę 1: "));
+    const liczba2 = parseInt(prompt("Podaj liczbę 2: "));
+    const rodzajOperacji = prompt("Podaj rodzaj operacji (+, -, *, /)");
+
+    const wynikP = document.querySelector('.wynik');
+    wynikP.className +=  ' bounce-in-top';
+    wynikP.textContent = dzialanieMatematyczne(liczba1, liczba2, rodzajOperacji);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanko 1</title>
+</head>
+<body>
+
+<script>
+    function zbierzDane() {
+        let liczba1 = parseInt(prompt("Podaj pierwszą liczbę"));
+        let liczba2 = parseInt(prompt("Podaj drugą liczbę"));
+        return [liczba1, liczba2]
+    }
+
+    function dodaj(liczba1, liczba2) {
+        document.write(`Suma: ${liczba1} + ${liczba2} = ${liczba1+liczba2} <br>`);
+    }
+
+    function odejmij(liczba1, liczba2) {
+        document.write(`Różnica: ${liczba1} - ${liczba2} = ${liczba1-liczba2} <br>`);
+    }
+
+    function pomnoz(liczba1, liczba2) {
+        document.write(`Iloraz: ${liczba1} * ${liczba2} = ${liczba1*liczba2} <br>`);
+    }
+
+    function podziel(liczba1, liczba2) {
+        if (liczba2 !== 0) {
+            document.write(`Iloczyn: ${liczba1} / ${liczba2} = ${liczba1 / liczba2}`);
+        } else {
+            document.write('Nie można dzielić przez zero...');
+        }
+    }
+
+    let liczby = zbierzDane();
+    let liczba1 = liczby[0];
+    let liczba2 = liczby[1];
+
+    dodaj(liczba1, liczba2);
+    odejmij(liczba1, liczba2);
+    pomnoz(liczba1, liczba2);
+    podziel(liczba1, liczba2);
+</script>
+
+</body>
+</html>
