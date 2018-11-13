@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lekcja</title>
+</head>
+<body>
+
+<script>
+    // Funkcja przyjmująca dowolną liczbę argumentów
+    // Tablica arguments jest tworzona automatycznie, przechowuje parametry przekazywane funkcji, jest jednowymiarowa
+
+    function cos() {
+        return arguments;
+    }
+
+    console.log(cos('Janusz', 'Grażyna', 'Mietek'));
+    // Objekt Arguments (zachowuje się jak tablica)
+
+    function cos2() {
+        document.write("Długość tablicy: " + arguments.length);
+    }
+    cos2('Janusz', 'Grażyna');
+    // Długość tablicy: 2
+
+    function cos3(mariusz) {
+        for (arg of arguments) {
+            document.write(arg + "<br>");
+        }
+    }
+    cos3('Janusz', 'Grażyna');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 1</title>
+</head>
+<body>
+
+<script>
+    function suma_2() {
+        let sum = 0;
+        for (let arg of arguments) {
+            if (!isNaN(arg)) {
+                sum += parseInt(arg);
+            } else {
+                console.log("Wykryto próbę dodania czegoś co nie jest liczbą. Nie ładnie!")
+            }
+        }
+        return sum;
+    }
+
+    document.write(suma_2(2, 5, 9, 'Już'));
+</script>
+
+</body>
+</html>
