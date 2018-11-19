@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablice w JavaScript</title>
+</head>
+<body>
+
+<script>
+    // =========== SPOSÓB 1 =============
+    // Deklaracja za pomocą literału tablicowego
+    let tablica = []; // Tworzymy w ten sposób pustą tablicę.
+
+    let tablica2 = ['Janusz', 'Grażyna', 'Zenon'];
+
+    // Pomijanie elementów
+    let tablica3 = [1,,3,,5]; // Puste pola zostaną stworzone automatycznie z wartością undefined
+
+    console.log(tablica2);
+    console.log(tablica3);
+    console.log(tablica3[1]);
+
+    // =========== SPOSÓB 2 =============
+    // Deklaracja za pomocą konstruktora tablicy
+    let tab1 = []; // Powstaje pusta tablica
+    let tab2 = new Array(3); // Powstaje tablica z 3 pól undefined
+    let tab3 = [1, 2]; // Powstaje tablica z elementami 1 i 2, czyli [1, 2]
+
+    console.log(tab2);
+
+    // Sprawdzanie ilości elementów w tablicy
+    let ile = tab3.length; // > 2
+    document.write(ile);
+
+    // Wyświetlanie elementów za pomocą pętli
+    for (let i = 0; i<tablica2.length; i++) {
+    	document.write(tablica2[i] + '<br>');
+    }
+
+    // Pętla for ... in
+    for (x in tablica2) {
+    	document.write(tablica2[x] + '<br>');
+    }
+
+    // Pętla for ... of
+    for (x of tablica2) {
+    	document.write(x + '<br>');
+    }
+</script>
+
+</body>
+</html>

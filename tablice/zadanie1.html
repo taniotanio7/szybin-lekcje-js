@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 1</title>
+</head>
+<body>
+
+<p>Wpisz kilka rzeczy, a ja wyświetlę Ci je w eleganckiej ponumerowanej liście 😊</p>
+
+<script>
+	let tablica = [];
+
+    while (true) {
+    	const daneWej = prompt("Podaj mi twój element listy:");
+
+    	if (daneWej === '') {
+    		break;
+        } else {
+    		tablica.push(daneWej);
+        }
+    }
+
+	document.write(`<h2>Oto lista twoich ${tablica.length} elementów (☞ﾟ∀ﾟ)☞</h2>`);
+	document.write('<ol>');
+	tablica.forEach( e => document.write(`<li>${e}</li>`));
+	document.write('</ol>');
+</script>
+
+</body>
+</html>
