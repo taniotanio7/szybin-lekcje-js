@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 2</title>
+</head>
+<body>
+
+<script>
+    function separator(znak_rozdzielajacy=':') {
+        if (arguments.length > 1) {
+            const znaki = Array.from(arguments).filter( (value, index) => index > 0 );
+            let ciag_znakow = "";
+            znaki.forEach( (element, index) => {
+                if (index !== znaki.length-1) {
+                    ciag_znakow += element + znak_rozdzielajacy
+                } else {
+                    ciag_znakow += element;
+                }
+            });
+            return ciag_znakow;
+        }  else {
+            return "";
+        }
+    }
+    console.log(separator(':', 'cos'));
+</script>
+
+</body>
+</html>

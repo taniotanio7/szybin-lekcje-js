@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 4</title>
+</head>
+<body>
+
+<script>
+    function lista() {
+    	let html = '';
+    	function generateListItems(listItems) {
+    		// Funkcja pomocnicza, zwraca kod HTML elementów listy, poza pierwszym (typ listy)
+    		let html = '';
+            for (let i = 1; i<listItems.length; i++) {
+            	html += `<li>${listItems[i]}</li>`;
+            }
+            return html;
+	    }
+
+        if (arguments[0] === 'u') {
+        	// Lista typu ul
+        	html += '<ul>' + generateListItems(arguments) + '</ul>';
+        } else if (arguments[0] === 'l') {
+        	// Lista typu ol
+        	html += '<ol>' + generateListItems(arguments) +'</ol>';
+        } else {
+        	throw "Niepoprawny typ listy";
+        }
+
+        return html;
+    }
+
+    document.write(lista('l', 'abc', 'dwa', 'trzy'));
+    document.write(lista('u', 'abc', 'dwa', 'trzy'));
+</script>
+
+</body>
+</html>

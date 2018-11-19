@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3</title>
+</head>
+<body>
+
+<script>
+    function tabelkaPrzekombinowana() {
+        const table = document.createElement('table');
+        table.style.border = '1px solid black';
+
+        for (arg of arguments) {
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+
+            td.textContent = arg;
+            td.style.border = '1px solid black';
+
+            tr.appendChild(td);
+            table.appendChild(tr);
+        }
+        return table;
+    }
+
+    const moja_tabelka = tabelkaPrzekombinowana('Jonatan', 'Maciek', 'Janusz');
+
+    const body = document.querySelector('body');
+    body.appendChild(moja_tabelka);
+
+</script>
+
+</body>
+</html>

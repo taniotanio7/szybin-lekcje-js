@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3 - wersja alternatywna</title>
+</head>
+<body>
+
+<script>
+    function tabelkaProsta() {
+        let tabelka = "";
+        for (arg of arguments) {
+            tabelka += `<tr><td>${arg}</td></tr>`;
+        }
+        return `<table border>${tabelka}</table>`;
+    }
+
+    document.write(tabelkaProsta('raz', 'dwa', 'trzy'));
+</script>
+
+</body>
+</html>
