@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablice - Metody</title>
+</head>
+<body>
+
+<script>
+	const tablica = ["Element1", "Element2", "Element3"];
+
+	// join() – łączenie elementów (opcjonalnie: co będzie je łączyć)
+	document.write(tablica.join() + '<br>'); // domyślnie .join() rozdziela je używając ","
+	document.write(tablica.join(' + ') + '<br>');
+
+	// reverse() - odwraca elementy tablicy
+	document.write(tablica.reverse() + '<br>');
+
+	// concat() – łączenie tablic
+	const tab1 = ["pies", "kot"];
+	const tab2 = ["słoń", "tygrys"];
+	const tab3 = ["małpa", "goryl"];
+
+	const nowa = tab1.concat(tab2);
+	document.write(nowa + '<br>');
+
+	// Może przyjmować więcej argumentów jako tablice
+	const nowa2 = tab1.concat(tab2, tab3);
+	document.write(nowa2 + '<br>');
+
+	// pop() – usuwa ostatni element z tablicy i go zwraca
+	let tablica2 = [1, 2, 3];
+	document.write(tablica2.pop() + '<br>');
+	document.write(tablica2 + '<br>');
+
+	// push() – dodaje na koniec tablicy, zwraca nową długość tablicy
+	let tablica3 = ["Zenon", "Kaśka"];
+	document.write(tablica3.push("Janusz", "Grażyna") + '<br>');
+	document.write(tablica3 + '<br>');
+
+	// shift() – usuwa pierwszy element z tablicy i go zwraca
+	document.write(tablica3.shift() + '<br>');
+	document.write(tablica3 + '<br>');
+
+	// unshift() – wstawia nowy element na początek tablicy, zwraca nową długość tablicy
+	document.write(tablica3.unshift("Pjoeter") + '<br>');
+	document.write(tablica3 + '<br>');
+
+	// splice() – usuwanie/dodawanie dowolnego elementu z tablicy/w dowolnym miejscu
+	// splice(od_którego, ile_wyciąć, opcjonalny:elementy_wstawiane)
+	let tablica4 = ["Janusz", "Grażyna", "Mjetek", "Pjoeter"];
+	tablica4.splice(2,1,"Paweł", "Tomek"); // usunięcie Mjetka, zastąpienie na Paweł i Tomek
+	document.write(tablica4 + '<br>');
+
+	// sort() – sortowanie bąbelkowe, leksykalne (nie sortuje liczb, jak w książce telefonicznej)
+	let tablica5 = [4, 343, 213, 76, 5];
+	document.write(tablica5.sort() + '<br>');
+
+	// Rozwiązanie problemu:
+	function porownaj(a, b) {
+		return a-b;
+	}
+
+	document.write(tablica5.sort(porownaj) + '<br>')
+</script>
+
+</body>
+</html>

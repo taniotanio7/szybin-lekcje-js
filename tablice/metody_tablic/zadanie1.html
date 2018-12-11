@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 1</title>
+</head>
+<body>
+
+<table border>
+
+</table>
+
+<script>
+	const kolumny = parseInt(prompt("Podaj ilość kolumn"));
+	let tab = [];
+	let i = 0;
+
+	while (true) {
+		const item = prompt(`Podaj wartość tab[${i}] = `);
+
+		if (item !== 'k') {
+			tab.push(item);
+			i++;
+		} else {
+			break;
+		}
+	}
+
+	// Dzielenie tablicy na mniejsze, dla kolumny
+	let tablice = [];
+	const elements_count = tab.length;
+	while (tab.length > 0) {
+		tablice.push(tab.splice(0, kolumny));
+	}
+
+	// Wyświetlanie tablicy
+	table = document.querySelector('table');
+
+	for (const row of tablice) {
+		const tr = document.createElement('tr');
+		row.forEach( item => {
+			const td = document.createElement('td');
+			td.textContent = item;
+			tr.appendChild(td);
+		});
+		table.appendChild(tr);
+	}
+
+	document.write("Ilość elementów: " + elements_count);
+</script>
+
+</body>
+</html>
