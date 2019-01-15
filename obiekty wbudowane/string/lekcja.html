@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Obiekt String</title>
+</head>
+<body>
+
+<script>
+  // Tworzenie
+  // 1.
+  var napis = "Witaj na mojej stronie";
+
+  // 2. Konstruktor
+  var napis2 = String("Witaj przybyszu na mojej stronie");
+
+  // ===============================
+  // Operacje na łańcuchach znakowych
+  // ===============================
+
+  // 1. Formatowanie (w HTMLu)
+  document.write(napis.bold() + '<br>'); // Dodaje pogrubienie, tak jak w HTML
+  document.write(napis.italics() + '<br>'); // Pochylenie
+  document.write(napis.fontcolor('#f00') + '<br>'); // Kolor czerwony w systemie szestnastkowym
+  document.write(napis.fixed() + '<br>'); // Czcionka o stałej szerokości znaków
+  document.write(napis.fontsize(12) + '<br>'); // Czcionka o wielkości 12
+  document.write(napis.strike() + '<br>'); // Przkreślenie
+  document.write(napis.sub() + '<br>'); // Indeks dolny
+  document.write(napis.sup() + '<br>'); // Indeks górny
+  document.write(napis.link("http://google.com") + '<br>'); // Link
+  // Metody można łączyć:
+  document.write(napis.bold().fontcolor('#5cf892').strike() + '<br>');
+
+  document.write('<br><br><br>');
+
+  // 2. Modyfikowanie tekstu
+  // PROTIP: String jest tablicą jednowymiarową
+  document.write(napis.toUpperCase() + '<br>'); // duże litery
+  document.write(napis.toLocaleLowerCase() + '<br>'); // małe litery
+  document.write(napis.length + '<br>'); // długość
+  document.write(napis.charAt(4) + '<br>'); // zwraca podany znak, licząc od 0
+  document.write(napis[4] + '<br>'); // inny sposób
+  document.write(napis.charCodeAt(4) + '<br>'); // kod ASCII znaku
+
+  var nowy = napis.concat('aaaa', "AAAAA"); // łączenie stirngów
+  document.write(nowy + '<br>');
+
+  // indexOf – zwraca indeks pierwszego znalezionego znaku / ciągu, lub -1 jeśli nie istnieje
+  document.write(nowy.indexOf('na') + '<br>'); // => 6
+  document.write(nowy.indexOf('janusz123') + '<br>'); // => -1
+
+  // substring(x, y) – zwraca znaki pomiędzy dwoma podanymi indeksami
+  document.write(nowy.substring(5, 8) + '<br>'); // => "na" (pomiędzy 6, a 8 indeksem)
+
+  // substr(od, ile) – zwraca łańcuch od indeksu (łącznie z nim) do wyznaczonej ilości znaków
+  document.write(nowy.substr(5, 7) + '<br>'); // => "na moj"
+
+  // slice(od, do) – wydobywa łańcuch
+  // różnica między substirng, a slice: https://stackoverflow.com/questions/2243824/what-is-the-difference-between-string-slice-and-string-substring
+  // if you know the index(the position) on which you'll stop (but NOT include), Use slice()
+  // if you know the length of characters to be extracted use substr().
+
+
+  // replace(ciągSzukany, ciągZamieniony) – zamienia ciągSzukany na ciągZamieniony
+  document.write(napis.replace('stronie', 'kuchni').replace('na', 'w') + '<br>')
+
+  // split(separator, limit) – rozdziela ciąg na tablice
+
+
+</script>
+
+</body>
+</html>

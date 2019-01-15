@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 1 - Zegar</title>
+  <style>
+    .container, span[id^="zegar"] {
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+
+  function wyswietlZegar() {
+      const data = new Date();
+      const godziny = data.getHours();
+      const minuty = data.getMinutes();
+      const sekundy = data.getSeconds();
+      const domGodziny = document.getElementById('zegar-godziny');
+      const domMinuty = document.getElementById('zegar-minuty');
+      const domSekundy = document.getElementById('zegar-sekundy');
+
+      function getClockHoursString(number) {
+      	let numberString = "";
+      	if (number < 10) {
+      		numberString = '0' + number
+        } else {
+      		numberString = number.toString();
+        }
+      	return numberString;
+      }
+
+      function getNumbersAsImage(number) {
+      	let html = "";
+      	let numbersString = getClockHoursString(number);
+        [...numbersString].forEach( number => html += `<img src="img/c${number}.jpg">` );
+        return html;
+      }
+
+      domGodziny.innerHTML = getNumbersAsImage(godziny);
+      domMinuty.innerHTML = getNumbersAsImage(minuty);
+      domSekundy.innerHTML = getNumbersAsImage(sekundy);
+  }
+
+</script>
+
+<div class="container">
+  <span id="zegar-godziny">
+    <img src="img/cb.jpg">
+    <img src="img/cb.jpg">
+  </span>
+
+  <img src="img/:.jpg">
+
+  <span id="zegar-minuty">
+    <img src="img/cb.jpg">
+    <img src="img/cb.jpg">
+  </span>
+
+  <img src="img/:.jpg">
+
+  <span id="zegar-sekundy">
+    <img src="img/cb.jpg">
+    <img src="img/cb.jpg">
+  </span>
+</div>
+
+<script>
+  setInterval(wyswietlZegar, 1000);
+</script>
+
+</body>
+</html>

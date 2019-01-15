@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lekcja</title>
+  <style>
+    #zegar {
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .container {
+
+    }
+  </style>
+</head>
+<body onLoad="wyswietlCzas()">
+
+<script>
+	function wyswietlCzas() {
+		const data = new Date();
+		const godziny = data.getHours();
+		const minuty = data.getMinutes();
+		const sekundy = data.getSeconds();
+		var czas = godziny;
+		czas += ((minuty<10)? ":0" : ":") + minuty;
+		czas += ((sekundy<10)? ":0" : ":") + sekundy;
+
+		const zegar = document.getElementById('zegar');
+		zegar.innerHTML = czas;
+	}
+
+	// setInterval – cykliczne wywołanie fynkcji
+	setInterval(wyswietlCzas, 1000);
+
+    // setTimeout
+    // setTimeout(wyswietlCzas ,1000);
+</script>
+
+<div class="container">
+  <p id="zegar"></p>
+</div>
+
+</body>
+</html>

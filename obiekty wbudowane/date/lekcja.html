@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Obiekty wbudowane</title>
+</head>
+<body>
+
+<script>
+	// Obiekt Date
+	// Operacje na dacie, pobieranie elementów związanych z datą
+
+	const data = new Date();
+	document.write(data + '<br>');
+
+	// Czas lokalny
+	document.write(data.toLocaleString() + '<br>');
+
+	// Pobranie konkretnych danych (np. rok)
+	document.write(data.getFullYear() + '<br>'); // Rok
+	document.write(data.getMonth() + '<br>'); // Miesiąc (są liczone od 0)
+	document.write(data.getDate() + '<br>'); // Dzień miesiąca
+	document.write(data.getDay() + '<br>'); // Dzień tygodnia
+
+	document.write(data.getHours() + '<br>'); // Godzina (systemowa)
+	document.write(data.getMinutes() + '<br>'); // Minuty
+	document.write(data.getSeconds() + '<br>'); // Sekundy
+
+</script>
+
+</body>
+</html>

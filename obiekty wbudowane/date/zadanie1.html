@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 1</title>
+	<style>
+		.container span {
+			font-weight: bold;
+		}
+
+		.container p {
+			margin-bottom: 5px;
+			margin-top: 2px;
+		}
+	</style>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+	<p>Aktualny czas: <span id="hours"></span></p>
+	<p>Aktualna data: <span id="date"></span></p>
+	<p>Dziś jest: <span id="dayOfTheWeek"></span></p>
+	<p>Aktualny miesiąc to: <span id="month"></span></p>
+</div>
+
+<script>
+	const hours = document.getElementById('hours');
+	const date = document.getElementById('date');
+	const dayOfTheWeek = document.getElementById('dayOfTheWeek');
+	const month = document.getElementById('month');
+
+	function refreshData () {
+		const dateObj = new Date();
+		hours.textContent = dateObj.toLocaleTimeString();
+		date.textContent = dateObj.toLocaleDateString();
+		dayOfTheWeek.textContent = dateObj.toLocaleDateString('pl-PL', {weekday: "long"});
+		month.textContent = dateObj.toLocaleDateString('pl-PL', {month: "long"});
+	}
+
+	refreshData();
+	setInterval(refreshData, 1000);
+</script>
+
+</body>
+</html>
